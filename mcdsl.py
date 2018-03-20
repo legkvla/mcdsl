@@ -5,7 +5,7 @@ import time
 mc = minecraft.Minecraft.create()
 mc.postToChat("DSL initialized")
 
-def teleport(height):
+def teleport-up(height):
   playerPos = mc.player.getPos()
   mc.player.setPos(playerPos.x, playerPos.y + height, playerPos.z)
   mc.postToChat("Dont look down")
