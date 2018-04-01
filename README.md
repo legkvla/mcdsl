@@ -94,3 +94,8 @@ FENCE_GATE          = Block(107)
 GLOWING_OBSIDIAN    = Block(246)
 NETHER_REACTOR_CORE = Block(247)
 ```
+
+# Reference
+
+* http://www.stuffaboutcode.com/2013/04/minecraft-pi-edition-api-tutorial.html
+* https://www.raspberrypi-spy.co.uk/2014/09/raspberry-pi-minecraft-block-id-number-reference/
