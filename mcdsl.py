@@ -16,9 +16,9 @@ class Context(object):
     playerPos = mc.player.getPos()
 
     def __init__(self):
-        self.x = playerPos.x
-        self.y = playerPos.y
-        self.z = playerPos.z
+        self.x = self.playerPos.x
+        self.y = self.playerPos.y
+        self.z = self.playerPos.z
 
     def left(self, val):
         self.x -= val
