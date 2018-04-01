@@ -20,19 +20,19 @@ class Context(object):
         self.y = self.playerPos.y
         self.z = self.playerPos.z
 
-    def left(self, val):
+    def right(self, val):
         self.x -= val
         self
 
-    def right(self, val):
+    def left(self, val):
         self.x += val
         self
 
-    def up(self, val):
+    def down(self, val):
         self.y -= val
         self
 
-    def down(self, val):
+    def up(self, val):
         self.y += val
         self
 

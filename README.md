@@ -12,7 +12,7 @@ c = mcdsl.Context()
 c.block(block.STONE)
 c.forward(1)
 c.block(block.STONE)
-c.forward(1)
+c.left(1)
 c.block(block.STONE)
 
 mcdsl.teleport_up(5)
