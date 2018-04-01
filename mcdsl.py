@@ -5,7 +5,7 @@ import time
 mc = minecraft.Minecraft.create()
 mc.postToChat("DSL initialized")
 
-def teleport-up(up):
+def teleport_up(up):
     playerPos = mc.player.getPos()
     mc.player.setPos(playerPos.x, playerPos.y + up, playerPos.z)
     mc.postToChat("Dont look down")
@@ -18,30 +18,30 @@ class Context(object):
         self.y = playerPos.y
         self.z = playerPos.z
 
-    def left(self, val)
+    def left(self, val):
         self.x -= val
         self
 
-    def right(self, val)
+    def right(self, val):
         self.x += val
         self
 
-    def up(self, val)
+    def up(self, val):
         self.y -= val
         self
 
-    def down(self, val)
+    def down(self, val):
         self.y += val
         self
 
-    def forward(self, val)
+    def forward(self, val):
         self.z += val
         self
 
-    def backward(self, val)
+    def backward(self, val):
         self.z -= val
         self
 
-    def block(self, kind)
+    def block(self, kind):
         mc.setBlock(x, y, z, kind)
         self

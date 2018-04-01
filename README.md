@@ -7,7 +7,7 @@ Tested with Minecraft PI Edition
 
 ```
 import mcdsl
-mcdsl.teleport(5)
+mcdsl.teleport_up(5)
 ```
 
 # How to
