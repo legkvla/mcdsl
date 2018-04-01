@@ -7,6 +7,14 @@ Tested with Minecraft PI Edition
 
 ```
 import mcdsl
+import mcpi.block as block
+c = mcdsl.Context()
+c.block(block.STONE)
+c.forward(1)
+c.block(block.STONE)
+c.forward(1)
+c.block(block.STONE)
+
 mcdsl.teleport_up(5)
 ```
 
