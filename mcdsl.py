@@ -11,7 +11,7 @@ def teleport-up(up):
     mc.postToChat("Dont look down")
     time.sleep(1)
 
-class Context:
+class Context(object):
 
     def __init__(self, playerPos):
         self.x = playerPos.x
