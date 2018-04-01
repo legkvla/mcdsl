@@ -45,5 +45,5 @@ class Context(object):
         self
 
     def block(self, kind):
-        mc.setBlock(x, y, z, kind)
+        mc.setBlock(self.x, self.y, self.z, kind)
         self
