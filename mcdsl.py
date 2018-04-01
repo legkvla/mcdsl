@@ -13,7 +13,9 @@ def teleport_up(up):
 
 class Context(object):
 
-    def __init__(self, playerPos):
+    playerPos = mc.player.getPos()
+
+    def __init__(self):
         self.x = playerPos.x
         self.y = playerPos.y
         self.z = playerPos.z
