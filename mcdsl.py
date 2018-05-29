@@ -20,30 +20,18 @@ class Context(object):
         self.y = self.playerPos.y
         self.z = self.playerPos.z
 
-    def right(self, val):
-        self.x -= val
-        self
-
-    def left(self, val):
-        self.x += val
-        self
-
-    def down(self, val):
-        self.y -= val
-        self
-
-    def up(self, val):
-        self.y += val
-        self
-
-    def forward(self, val):
-        self.z += val
-        self
-
-    def backward(self, val):
-        self.z -= val
-        self
-
-    def block(self, kind):
+    def buildx(self, x, height, kind):
+        #self.x += x
+        #self.y += height
         mc.setBlock(self.x, self.y, self.z, kind)
-        self
+
+    def buildz(self, z, height, kind):
+        #self.z += z
+        #self.y += height
+        mc.setBlock(self.x, self.y, self.z, kind)
+
+    def build(self, x, z, height, kind):
+        #self.x += x
+        #self.z += z
+        #self.y += height
+        mc.setBlock(self.x, self.y, self.z, kind)
