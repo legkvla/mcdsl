@@ -23,22 +23,22 @@ class Context(object):
 
     def __init__(self):
         self.x = self.playerPos.x
-        self.height = self.playerPos.y
+        self.h = self.playerPos.y
         self.z = self.playerPos.z
 
-    def buildx(self, x, height, kind):
-        for dx in range(x):
-            for dh in range(height):
-                setBlock(self.x + dx, self.height + dh, self.z, kind)
-        self.x += x
-        self.height += height
+    def buildh(self, dx, dz, h, kind):
+        for dh in range(h):
+            setBlock(self.x + dx, self.h + dh, self.z + dz, kind)
 
-    def buildz(self, z, height, kind):
+    def buildx(self, x, h, kind):
+        for dx in range(x):
+            self.buildh(dx, h, 0, kind)
+        self.x += x
+
+    def buildz(self, z, h, kind):
         for dz in range(z):
-            for dh in range(height):
-                setBlock(self.x, self.height + dh, self.z + dz, kind)
+            self.buildh(0, h, dz, kind)
         self.z += z
-        self.height += height
 
     def build(self, x, z, height, kind):
         #self.x += x
