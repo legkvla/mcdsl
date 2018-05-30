@@ -33,16 +33,16 @@ class Context(object):
 
     def buildx(self, x, h, kind):
         for dx in range(x):
-            self.buildh(dx, h, 0, kind)
+            self.buildh(dx, 0, h, kind)
         self.x += x
 
     def buildz(self, z, h, kind):
         for dz in range(z):
-            self.buildh(0, h, dz, kind)
+            self.buildh(0, dz, h, kind)
         self.z += z
 
-    def build(self, x, z, height, kind):
+    def build(self, x, z, h, kind):
         #self.x += x
         #self.z += z
         #self.y += height
-        setBlock(x, height, z, kind)
+        setBlock(x, z, h, kind)
