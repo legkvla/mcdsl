@@ -11,9 +11,15 @@ def teleport_up(up):
     mc.postToChat("Dont look down")
     time.sleep(1)
 
+def getPos():
+    mc.player.getPos()
+
+def setBlock(x, h, z, kind):
+    mc.setBlock(x, h, z, kind)
+
 class Context(object):
 
-    playerPos = mc.player.getPos()
+    playerPos = getPos()
 
     def __init__(self):
         self.x = self.playerPos.x
@@ -23,14 +29,14 @@ class Context(object):
     def buildx(self, x, height, kind):
         for dx in range(x):
             for dh in range(height):
-                mc.setBlock(self.x + dx, self.height + dh, self.z, kind)
+                setBlock(self.x + dx, self.height + dh, self.z, kind)
         self.x += x
         self.height += height
 
     def buildz(self, z, height, kind):
         for dz in range(z):
             for dh in range(height):
-                mc.setBlock(self.x, self.height + dh, self.z + dz, kind)
+                setBlock(self.x, self.height + dh, self.z + dz, kind)
         self.z += z
         self.height += height
 
@@ -38,4 +44,4 @@ class Context(object):
         #self.x += x
         #self.z += z
         #self.y += height
-        mc.setBlock(self.x, self.height, self.z, kind)
+        setBlock(x, height, z, kind)
