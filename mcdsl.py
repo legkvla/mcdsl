@@ -16,6 +16,7 @@ def getPos():
 
 def setBlock(x, h, z, kind):
     mc.setBlock(x, h, z, kind)
+    print("setBlock(" + x + ", " + h + ", " + z + " ," + kind + ")")
 
 class Context(object):
 
