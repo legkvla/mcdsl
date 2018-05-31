@@ -42,7 +42,13 @@ class Context(object):
         self.z += z
 
     def build(self, x, z, h, kind):
-        #self.x += x
-        #self.z += z
-        #self.y += height
-        setBlock(x, z, h, kind)
+        for dx in range(x):
+            for dz in range(z):
+                self.buildh(dx, dz, h, kind)
+        self.x += x
+        self.z += z
+
+    def move(dx, dh, dz):
+        self.x += dx
+        self.z += dz
+        self.h += dh
